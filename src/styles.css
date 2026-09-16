@@ -1,3 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+:root {
+  --primary: #fea116;
+  --light: #f1f8ff;
+  --dark: #0f172b;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-  background-color: rebeccapurple;
+  font-family: "Open Sans", sans-serif;
+  background-color: #0f172b;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  height: 10vh;
+}
+nav {
+  display: flex;
+  gap: 3rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+}
+h1 svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 3;
+}
+nav button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--light);
+}
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 6rem;
+  height: 90vh;
+}
+.hero-headline {
+  font-size: calc(1.525rem + 3.3vw);
+  color: var(--light);
+}
+
+#content div:first-child {
+  max-width: 500px;
+  color: var(--light);
+}
+#content div:first-child p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+#content div:first-child button {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  background-color: var(--primary);
+  color: var(--light);
+  border: 0;
+  margin-top: 2rem;
+}
+
+#content div:last-child {
+  max-width: 500px;
+}
+
+img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.menu-header {
+  font-size: 4rem;
+  color: var(--light);
+}
+.about-header {
+  font-size: 4rem;
+  color: var(--light);
+}
+.contact-header {
+  font-size: 4rem;
+  color: var(--light);
 }
