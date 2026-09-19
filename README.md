@@ -1,54 +1,82 @@
 # restaurant_page-TOP
+
 🍽️ Restaurant Page
 A dynamic, tabbed restaurant homepage built entirely using JavaScript and DOM manipulation, bundled with Webpack.
 
 This project was developed as part of The Odin Project's JavaScript Curriculum.
 
 🚀 About the Project
-The primary goal of this project is to practice creating and manipulating DOM elements using JavaScript instead of hardcoding HTML content. Apart from a minimal HTML skeleton, the entire user interface—including the homepage, menu, and contact tabs—is generated dynamically through JavaScript modules.
+The primary goal of this project is to practice creating and manipulating DOM elements dynamically using JavaScript modules rather than hardcoding HTML content. Apart from a minimal HTML skeleton, the entire user interface—including the homepage, menu, and contact sections—is generated on the fly.
 
 Key Features
-Dynamic DOM Manipulation: HTML content is generated and injected into the DOM purely through JavaScript modules.
+Dynamic DOM Manipulation: All HTML content is rendered dynamically through JavaScript.
 
-Tab-Based Navigation: Smooth tab-switching logic allows users to navigate between the Home, Menu, and Contact pages without triggering a full page reload.
+Tab-Based Navigation: Seamless switching between the Home, Menu, and Contact pages without page reloads.
 
-Modular JavaScript (ES6 Modules): Each section of the website resides in its own isolated module, promoting clean code organization and separation of concerns.
+Modular JavaScript (ES6 Modules): Code is structured into dedicated modules to maintain separation of concerns.
 
-Asset Bundling with Webpack: JavaScript modules, HTML templates, and CSS stylesheets are bundled efficiently using Webpack.
+Webpack Setup with webpack-merge: Uses a modular configuration split across three files:
 
-🛠️ Built With
-JavaScript (ES6+)
+webpack.common.js – Contains base rules and shared loaders for all environments.
 
-HTML5 & CSS3
+webpack.dev.js – Contains development server and source map configurations.
 
-Webpack & Webpack Dev Server
+webpack.prod.js – Handles production optimization and build bundling.
 
-Git & GitHub Pages
+🛠️ Built With:
+
+    JavaScript (ES6+)
+
+    HTML5 & CSS3
+
+    Webpack & Webpack Dev Server
+
+    webpack-merge
+
+    GitHub Pages
 
 💻 Getting Started
-To run this project locally, follow these steps:
-
 Prerequisites
-Make sure you have Node.js and npm installed on your machine.
+Ensure you have Node.js and npm installed on your machine.
 
 Installation
-Clone the repository:
+**Clone the repository:**
 
-Bash
-git clone https://github.com/your-username/restaurant-page.git
+```bash
+git clone [https://github.com/your-username/restaurant-page.git](https://github.com/your-username/restaurant-page.git)
 cd restaurant-page
+```
+
 Install dependencies:
 
-Bash
+```bash
 npm install
-Start the development server:
+```
 
-Bash
-npx webpack serve
-Open http://localhost:8080 in your browser to view the application live.
+📜 Available Scripts
+In the project directory, you can run the following scripts:
 
-Building for Production
-To build the project files into the dist folder:
+npm run dev
+Runs the app in development mode by merging webpack.common.js and webpack.dev.js.
 
-Bash
-npx webpack
+It starts the development server with live reloading and automatically opens http://localhost:8080 in your default browser.
+
+```bash
+npm run dev
+```
+
+npm run build
+Bundles the app for production into the dist folder by merging webpack.common.js and webpack.prod.js.
+
+It optimizes the build for performance and minimizes the output files.
+
+```bash
+npm run build
+```
+
+npm run deploy
+Pushes the contents of your dist folder directly to the gh-pages branch on GitHub using git subtree to update the live site.
+
+```bash
+npm run deploy
+```
